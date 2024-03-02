@@ -1,0 +1,30 @@
+body{
+    
+    background: url('pexels-designecologist-2526105.jpg') no-repeat center center/cover;
+}
+
+#form{
+    color:rgb(255, 255, 255);
+    background-color: rgba(0,0,0,0.5);
+    width:30%;
+    border-radius: 4px;
+    margin:130px auto;
+    padding:70px;
+    box-shadow: 10px 10px 5px rgb(82, 11, 77);
+}
+
+#btn{
+    color:rgb(255, 255, 255);
+    background-color: rgba(0,0,0,0.5);
+    padding:10px;
+    font-size: large;
+    border-radius: 15px;
+}
+
+@media screen and (max-width: 570px) {
+    #form {
+      width: 75%;
+      margin-left:none;
+      padding:40px;
+    }
+  }
