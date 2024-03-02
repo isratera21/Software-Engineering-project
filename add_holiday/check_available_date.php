@@ -29,26 +29,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit(); // Ensure that no further code is executed
     }
 }
-?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Booking</title>
-    <!-- Additional meta tags, styles, and scripts -->
-</head>
-<body>
-    <h2>Event Booking</h2>
-    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <label for="event_date">Event Date:</label>
-        <input type="date" id="event_date" name="event_date" required>
-        <br>
-        <label for="event_reason">Event Reason:</label>
-        <input type="text" id="event_reason" name="event_reason" required>
-        <br>
-        <button type="submit">Book Event</button>
-    </form>
-</body>
-</html>
+
