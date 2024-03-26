@@ -1,0 +1,24 @@
+.notification {
+    position: fixed; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 80%; 
+    max-width: 600px;
+    background-color: #f0f0f0; 
+    color: #333; 
+    padding: 15px 20px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
+  }
+  
+  .notification.success {
+    background-color: #dff0d8; 
+    color: #3c763d; 
+  }
+  
+  .notification.error {
+    background-color: #f2dede; 
+    color: #a94442; 
+  }
+  
