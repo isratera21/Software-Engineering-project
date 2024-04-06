@@ -18,11 +18,6 @@
             $_SESSION['username'] = $username;
             header("Location: ../view/adminDash.php");
         }
-        elseif ($user['role']=='participant') {
-            $_SESSION['flag']="true";
-            $_SESSION['username'] = $username;
-            header("Location: ../view/participantDash.php");
-        }
         else {
             echo 'Invalid username or password';
         }
