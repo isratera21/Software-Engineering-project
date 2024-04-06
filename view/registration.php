@@ -97,8 +97,8 @@
                     <tr>
 
                         <td align="right">
-                            <h1>Railway Ticket Management System</h1>
-                            <h5>A Complete Application for Railway</h5>
+                            <h1> Event Management System</h1>
+                            <h5>A Complete Application for Event</h5>
                         </td>
                     </tr>
                 </table>
@@ -110,9 +110,6 @@
                     <a href="../index.php">Home</a> |
                     <a href="login.php">Login</a> |
                     <a href="registration.php">Registration</a> |
-                    <a href="deals&offers.php">Deals/Offers</a> |
-                    <a href="counters.php">Counters</a> |
-                    <a href="contactUs.php">Contact Us</a>
                 </nav>
             </td>
         </tr>
@@ -164,7 +161,6 @@
                                             <td>
                                                 <input type="radio" name="userType" value="employee"/> Admin
                                                 <input type="radio" name="userType" value="customer"/> Customer
-                                                <input type="radio" name="userType" value="participant"/> participant
                                             </td>
                                         </tr>
                                     </table>
