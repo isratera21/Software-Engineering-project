@@ -86,8 +86,6 @@
                         </tr>
                         <tr>
                             <td colspan="3">
-                                <a href="forgotpass.php">Forgot Password</a>
-                                <br><br>
                                 Don't have an Account?<br>
                                 <a href="registration.php">Register Now</a>
                             </td>
