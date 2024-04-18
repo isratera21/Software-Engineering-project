@@ -1,7 +1,6 @@
-/* style.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #fdfd96; /* Pastel yellow background */
+    background-color: #fdfd96; /* Pastel yellow bg */
     display: flex;
     align-items: center;
     justify-content: center;
