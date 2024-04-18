@@ -1,14 +1,13 @@
 <?php
-// Database credentials
-$host = 'localhost'; // Host name
-$dbname = 'event_management'; // Database name
-$username = 'root'; // Database username (default in XAMPP)
-$password = ''; // Database password (default in XAMPP is empty)
+$host = 'localhost';
+$dbname = 'event_management'; 
+$username = 'root'; 
+$password = ''; 
 
-// Create connection
+// Creating connection
 $conn = new mysqli($host, $username, $password, $dbname);
 
-// Check connection
+// Checking connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
@@ -16,13 +15,13 @@ if ($conn->connect_error) {
 // Get data from POST request
 $payment_method = $_POST['payment_method'];
 $identifier = $_POST['identifier'];
-$amount = $_POST['amount']; // New field for the amount
+$amount = $_POST['amount']; 
 
-// Prepare SQL Statement
+
 $stmt = $conn->prepare("INSERT INTO payments (payment_method, identifier, amount) VALUES (?, ?, ?)");
 $stmt->bind_param("ssd", $payment_method, $identifier, $amount);
 
-// Execute the statement and check for errors
+
 if ($stmt->execute()) {
     echo "<!DOCTYPE html>
     <html lang='en'>
@@ -41,7 +40,7 @@ if ($stmt->execute()) {
     echo "Error: " . $stmt->error;
 }
 
-// Close statement and connection
+// Closing statement 
 $stmt->close();
 $conn->close();
 ?>
