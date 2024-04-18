@@ -1,5 +1,4 @@
 <?php
-//database connection
 $servername = "localhost";
 $username = "root"; 
 $password = ""; 
@@ -7,12 +6,12 @@ $dbname = "event_management";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
+// Checking connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Retrieve form data
+// get form data
 $current_password = $_POST['current_password'];
 $new_password = $_POST['new_password'];
 $confirm_password = $_POST['confirm_password'];
