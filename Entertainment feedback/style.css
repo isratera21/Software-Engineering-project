@@ -7,7 +7,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    color: black; /* Ensures all text is white */
+    color: black; /* all text is white */
 }
 
 .feedback-container {
