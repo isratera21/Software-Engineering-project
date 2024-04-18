@@ -4,10 +4,10 @@ $username = "root";
 $password = "";
 $dbname = "event_feedback";
 
-// Create connection
+// Creating connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Check connection
+// Checking connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
