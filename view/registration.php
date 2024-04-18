@@ -120,7 +120,7 @@
                 <table align="center">
                     <tr>
                         <td>
-                        <form name="registrationForm" action="../controller/registerCheck.php" method="post" onsubmit="return validateForm()">
+                        <form name="registrationForm" action="../controller/registerCheck.php" method="post">
         
                                 <fieldset>
                                     <legend>REGISTRATION</legend>
