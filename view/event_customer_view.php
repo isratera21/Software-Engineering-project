@@ -1,3 +1,6 @@
+<?php
+require_once('../controller/cookie_check.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,7 +65,7 @@
     <table border="1">
         <tr>
             <th>ID</th>
-            <th>Name</th>
+            <th>UserName</th>
             <th>Email</th>
             <th>Phone</th>
             <th>Event Name</th>
@@ -72,16 +75,24 @@
             <th>Action</th> 
         </tr>
             <?php
+            session_start();
                 require_once("../model/db.php");
+
+                $username=$_SESSION['username'];
                 $con=getConnection();
-                $sql = "select * from event";
-                $result = mysqli_query($con, $sql);
-                while($row=mysqli_fetch_assoc($result)){
+                $sql = "SELECT * FROM event WHERE username = ?";
+                $stmt = mysqli_prepare($con, $sql);
+                mysqli_stmt_bind_param($stmt, "s", $username);
+                mysqli_stmt_execute($stmt);
+                $result = mysqli_stmt_get_result($stmt);
+                if ($result) {
+                    $row = mysqli_fetch_assoc($result);
+                }
                                         
                     echo 
                         "<tr>
                             <td>$row[id]</td>
-                            <td>$row[name]</td>
+                            <td>$row[username]</td>
                             <td>$row[email]</td>
                             <td>$row[phone]</td>
                             <td>$row[eventName]</td>
@@ -89,11 +100,11 @@
                             <td>$row[location]</td>
                             <td>$row[service]</td>
                             <td>
-                            <a href='../controller/update_event.php?id=$row[id]'>update</a>
+                            
                             <a href='../controller/delete_event.php?id=$row[id]'>Delete</a>
                             </td>
                         </tr>";
-                }
+                
             ?>
     </table> 
 </body>
