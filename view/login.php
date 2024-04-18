@@ -64,7 +64,7 @@
 <table align="center">
     <tr>
         <td>
-        <form name="loginForm" action="../controller/loginCheck.php" method="post" onsubmit="return validateLoginForm()">
+        <form name="loginForm" action="../controller/loginCheck.php" method="post">
                 <fieldset>
                     <legend>LogIn</legend>
                     <table>
