@@ -1,3 +1,7 @@
+
+<?php
+require_once('../controller/cookie_check.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -62,13 +66,14 @@
     <table border="1">
         <tr>
             <th>ID</th>
-            <th>Name</th>
+            <th>UserName</th>
             <th>Email</th>
             <th>Phone</th>
             <th>Event Name</th>
             <th>Date</th>
             <th>Location</th> 
             <th>Service</th> 
+            <th>Action</th>
         </tr>
             <?php
                 require_once("../model/db.php");
@@ -80,13 +85,16 @@
                     echo 
                         "<tr>
                             <td>$row[id]</td>
-                            <td>$row[name]</td>
+                            <td>$row[username]</td>
                             <td>$row[email]</td>
                             <td>$row[phone]</td>
                             <td>$row[eventName]</td>
                             <td>$row[date]</td>
                             <td>$row[location]</td>
                             <td>$row[service]</td>
+                            <td>
+                            <a href='../controller/delete_event.php?id=$row[id]'>Delete</a>
+                            </td>
                         </tr>";
                 }
             ?>

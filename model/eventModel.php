@@ -2,10 +2,10 @@
 
     require_once('db.php');
 
-    function addEvent($name,$email,$phone,$eventName,$date,$location,$service){
+    function addEvent($username,$email,$phone,$eventName,$date,$location,$service){
         $con = getConnection();
-        $sql = "INSERT INTO event (name,email,phone,eventName,date,location,service) 
-        VALUES ('$name','$email','$phone','$eventName','$date','$location','$service')";
+        $sql = "INSERT INTO event (username,email,phone,eventName,date,location,service) 
+        VALUES ('$username','$email','$phone','$eventName','$date','$location','$service')";
         
         if(mysqli_query($con, $sql)){
             return true;

@@ -1,0 +1,22 @@
+Name: tasfee
+Email: tas@gmail.com
+Rating: 1
+Satisfaction: Neutral
+Comments: dhjgdl
+Name: liza
+Email: liza@gmail.com
+Rating: 2
+Satisfaction: Dissatisfied
+Comments: udgadgf
+Name: riya
+Email: riya@gmail.com
+Rating: 1
+Satisfaction: Very satisfied
+Comments: eqieh
+
+Name: jerin
+Email: jerin@gmail.com
+Rating: 3
+Satisfaction: Neutral
+Comments: juhfoinjdgboet
+

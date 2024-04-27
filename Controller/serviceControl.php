@@ -1,22 +1,12 @@
 <?php 
-  require_once("../model/db.php");   
-    if(isset($_POST['submit'])){
+    require_once("../model/serviceModel.php");   
+        if($_SERVER['REQUEST_METHOD']=='POST'){
 
         $name = $_POST['name'];
         $cost = $_POST['cost']; 
-        $con = getConnection();
-        $result = mysqli_query($con, "INSERT into service(name,cost) values('$name', '$cost')");
-
-        if($result)
-        {
-           
-            header("location: ../view/viewServices.php");
-        }
-        else{
-            echo "Failed";
-        }
-
-
+        addService($name, $cost);
+        echo"service added successfully";
 
     }
 ?>
+

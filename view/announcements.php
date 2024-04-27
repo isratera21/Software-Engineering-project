@@ -1,4 +1,6 @@
-<!-- announcements.php -->
+<?php
+require_once('../controller/cookie_check.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>

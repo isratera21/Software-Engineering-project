@@ -65,11 +65,7 @@
             margin: 5px;
         }
 
-        footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #777;
-        }
+        
 
         p {
             color: #555;
@@ -90,29 +86,8 @@
     
 </head>
 <body>
-    <table border="1" width="100%" height="100%" align="center">
-        <tr height="70">
-            <td>
-                <table width="100%">
-                    <tr>
-
-                        <td align="right">
-                            <h1> Event Management System</h1>
-                            <h5>A Complete Application for Event</h5>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-        <tr height="20">
-            <td align="center">
-                <nav>
-                    <a href="../index.php">Home</a> |
-                    <a href="login.php">Login</a> |
-                    <a href="registration.php">Registration</a> |
-                </nav>
-            </td>
-        </tr>
+    <table  width="100%" height="100%" align="center">
+        
 <!--Header End -->
 
         <tr>
@@ -120,7 +95,7 @@
                 <table align="center">
                     <tr>
                         <td>
-                        <form name="registrationForm" action="../controller/registerCheck.php" method="post">
+                        <form name="registrationForm" action="../controller/registerCheck.php" method="post" onsubmit="return validateForm()">
         
                                 <fieldset>
                                     <legend>REGISTRATION</legend>
@@ -159,8 +134,9 @@
                                             <td>User Type</td>
                                             <td>:</td>
                                             <td>
-                                                <input type="radio" name="userType" value="employee"/> Admin
+                                                <input type="radio" name="userType" value="admin"/> Admin
                                                 <input type="radio" name="userType" value="customer"/> Customer
+                                               
                                             </td>
                                         </tr>
                                     </table>
@@ -190,19 +166,7 @@
             </td>
         </tr>
 <!--Body End -->
-        <tr height="45" align="center">
-            <td>
-                <nav>
-                    <a href="view/refundPolicy.php">Refund Policy</a> |
-                    <a href="view/facilities.php">Facilities</a> |
-                    <a href="view/faq.php">FAQ</a> |
-                    <a href="view/t&c.php">Terms & Conditions</a> |
-                    <a href="view/privacyPolicy.php">Privacy Policy</a> |
-                    <a href="view/aboutUs.php">About Us</a>
-                </nav>
-                <footer>Copyright &copy; 2023</footer>
-            </td>
-        </tr>
+       
     </table>
 </body>
 </html>

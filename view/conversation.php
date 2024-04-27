@@ -2,7 +2,9 @@
 require_once('../controller/cookie_check.php');
 ?>
 <html>
-  <head></head>
+  <head>
+      <title>Comment and Reply</title>
+  </head>
   <style>
     *{
       margin: 0px;
@@ -14,7 +16,7 @@ require_once('../controller/cookie_check.php');
     }
     .container{
       background: Lavender;
-      width: 1300px;
+      width: 1400px;
       margin: 0 auto;
       padding-top: 1px;
       padding-bottom: 5px;

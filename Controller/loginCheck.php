@@ -11,13 +11,16 @@
         if ($user['role']=='customer') {
             $_SESSION['flag']="true";
             $_SESSION['username'] = $username;
+            setcookie('flag', 'true', time()+10000, '/');
             header("Location: ../view/customerDash.php");
         } 
-        elseif ($user['role']=='admin') {
+        else if ($user['role']=='admin') {
             $_SESSION['flag']="true";
             $_SESSION['username'] = $username;
+            setcookie('flag', 'true', time()+10000, '/');
             header("Location: ../view/adminDash.php");
         }
+        
         else {
             echo 'Invalid username or password';
         }

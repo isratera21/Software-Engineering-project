@@ -1,4 +1,5 @@
 <?php 
+require_once('../controller/cookie_check.php');
  require_once("../model/db.php"); 
 ?>
 

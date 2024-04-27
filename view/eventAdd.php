@@ -1,3 +1,6 @@
+<?php
+require_once('../controller/cookie_check.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,16 +47,9 @@
             border-radius: 5px;
             background-color: #fff;
             margin-bottom: 10px;
+            width : 20%
         }
 
-        select {
-                padding: 10px;
-                border: 1px solid #007bff;
-                border-radius: 5px;
-                background-color: #fff;
-                margin-bottom: 10px;
-                width: 10%; 
-            }
 
         input[type="submit"] {
             padding: 10px 20px;
@@ -79,54 +75,19 @@
 <body>
     <h3><a href="customerDash.php">Back</a></h3>
     <h1>Event Information</h1>
-    <form action="../controller/eventAddCheck.php" method="post" onsubmit="return validateForm()">
+    <form action="../controller/eventAddCheck.php" method="post">
         <input type="hidden" name="id" value="">
-        Name:     <input type="text" name="name" id="name" value="" ><br>
+        UserName:     <input type="text" name="username" id="name" value="" ><br>
         Email:    <input type="email" name="email" id="email" value="" ><br>
         Phone:    <input type="number" name="phone" id="phone" value="" ><br>
         Event Name:<input type="text" name="eventName" id="eventName" value="" ><br>
         Date:     <input type="date" name="date" id="date" value="" ><br>
         Location: <input type="text" name="location" id="location" value="" ><br>
-        Service:
-        <select name="service" id="service">
-        <option value="">Select a service</option> 
-        <?php
-
-              require_once("../model/db.php");
-              $con = getConnection();
-              $sql = "SELECT * FROM service"; 
-              $result = mysqli_query($con, $sql);
-                while($row = mysqli_fetch_assoc($result)) {
-                    echo "<option value='" . $row['service_id'] . "'>" . $row['name'] . "</option>";
-                }
-        ?>
-        </select><br>
-        <span id="error-message" class="error-message"></span><br>
+        Service: <input type="text" name="service" id="service" value="" placeholder = "add service from service list only" ><br>
+     
         <input type="submit" name="submit" value="Submit">
     </form>
 
-    <script>
-        function validateForm() {
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var phone = document.getElementById("phone").value;
-            var eventName = document.getElementById("eventName").value;
-            var date = document.getElementById("date").value;
-            var location = document.getElementById("location").value;
-            var service = document.getElementById("service");
-            var errorMessage = document.getElementById("error-message");
-
-            errorMessage.innerHTML = "";
-
-            if (name === "" || email === "" || phone === "" || eventName === "" || date === "" || location === "" || service === "") {
-                errorMessage.innerHTML = "All fields are required.";
-                return false;
-            }
-
-            
-
-            return true;
-        }
-    </script>
+    
 </body>
 </html>

@@ -1,3 +1,6 @@
+<?php
+require_once('../controller/cookie_check.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,8 +27,8 @@
             position: fixed;
             top: 10px;
             right: 10px;
-            background-color: #4CAF50; /* Green background color */
-            color: white; /* White text color */
+            background-color: #4CAF50; 
+            color: white; 
             padding: 10px;
             border-radius: 5px;
         }
@@ -59,38 +62,34 @@
     </style>
 </head>
 <body>
-    <h3><a href="../index.html">Back</a></h3>
+    <?php
+    require_once('../model/announcementModel.php');
+    $unread_count = getUnreadAnnouncementCount();
+    ?>
     <h1>Customer Dashboard</h1>
     <?php
-    // Code to get unread announcement count
-    require_once('../model/db.php');
-    $conn = getConnection();
-
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    $sql = "SELECT COUNT(*) AS unread_count FROM announcements WHERE is_read = 0";
-    $result = $conn->query($sql);
-
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $unread_count = $row["unread_count"];
         if ($unread_count > 0) {
             echo "<p class='notification'>You have $unread_count new announcement(s).</p>";
-        } else {
+        }       
+        else {
             echo "<p class='notification'>You have 0 new announcements.</p>";
         }
-    } else {
-        echo "<p class='notification'>You have 0 new announcements.</p>";
-    }
-    $conn->close();
-    ?>
+?>
     <ul>
-        <li><a href="eventAvailability.php">Add Event</a></li><br><br>
-        <li><a href="event_customer_view.php">Event List</a></li><br><br>
+        <li><a href="event_calendar.php">Event Calendar</a></li><br><br>   
         <li><a href="service_customerView.php">View service List</a></li>
-        <li><a href="announcements.php">announcements</a></li>
+        <li><a href="venue_list.php">Venue List</a></li>
+        <li><a href="choose_artist.php">Artist</a></li><br><br>
+        <li><a href="feedback.php">Feedback</a></li><br><br>
+        <li><a href="eventAvailability.php">Add Event</a></li>
+        <li><a href="payment.php">payment</a></li>
+        <li><a href="event_customer_view.php">Event List</a></li><br><br>
+        <li><a href="announcements.php">announcements</a></li><br><br>
+        <li><a href="conversation.php">Conversation</a></li><br><br>
+        <li><a href="myProCus.php">View Profile</a><li>
+        <li><a href="change_password.php">change password</a><li>   
+        <li><a href="../controller/logout.php">Logout</a></li><br>
+
         
 
     </ul>
