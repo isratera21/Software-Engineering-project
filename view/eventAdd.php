@@ -82,7 +82,7 @@ require_once('../controller/cookie_check.php');
         Phone:    <input type="number" name="phone" id="phone" value="" ><br>
         Event Name:<input type="text" name="eventName" id="eventName" value="" ><br>
         Date:     <input type="date" name="date" id="date" value="" ><br>
-        Location: <input type="text" name="location" id="location" value="" ><br>
+        Location: <input type="text" name="location" id="location" value="" placeholder = "add loaction from our venue list"><br>
         Service: <input type="text" name="service" id="service" value="" placeholder = "add service from service list only" ><br>
      
         <input type="submit" name="submit" value="Submit">

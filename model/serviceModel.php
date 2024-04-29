@@ -15,7 +15,21 @@
 
     }
 
+    function updateService($id,$name,$cost){
+        $con = getConnection();
+        $sql = "UPDATE service " .
+                "SET name='$name', cost='$cost'" .
+                "WHERE id=$id";
+        if(mysqli_query($con,$sql)){
+            return true;
+        }
+        else{
+            return false;
+        }
 
+
+
+    }
 
 
     function deleteservice($id){

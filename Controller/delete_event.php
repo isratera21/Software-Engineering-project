@@ -4,6 +4,6 @@
         $id=$_GET['id'];
         
         deleteevent($id);
-        header('location: ../view/event_customer_view.php');
+        header('location: ../view/viewBookedEvent.php');
     }
 ?>
