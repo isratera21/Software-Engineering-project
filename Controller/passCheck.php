@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $newPass = trim($_POST['newPass']);
     $retypedPass = trim($_POST['retypedPass']);
 
-    // You should add more validation and error handling here
+    
 
     // Verify the current password
     $con = getConnection();
